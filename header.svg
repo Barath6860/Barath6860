@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="45%" stop-color="#0b2545"/>
+      <stop offset="80%" stop-color="#0e4c75"/>
+      <stop offset="100%" stop-color="#0891b2"/>
+    </linearGradient>
+    <linearGradient id="wave1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2563eb" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.45"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </linearGradient>
+    <style>
+      .title { font: 800 72px 'Segoe UI', 'Inter', 'Helvetica Neue', Arial, sans-serif; fill: #ffffff; letter-spacing: 6px; opacity: 0; animation: fadeUp 1.2s ease-out 0.2s forwards; }
+      .sub   { font: 500 22px 'Segoe UI', 'Inter', 'Helvetica Neue', Arial, sans-serif; fill: #cbd5e1; letter-spacing: 3px; opacity: 0; animation: fadeUp 1.2s ease-out 0.8s forwards; }
+      .dot   { fill: #7dd3fc; animation: twinkle 3s ease-in-out infinite; }
+      @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+      @keyframes twinkle { 0%,100% { opacity: 0.15; } 50% { opacity: 0.9; } }
+    </style>
+  </defs>
+
+  <rect width="1200" height="300" fill="url(#bg)"/>
+
+  <!-- twinkling dots -->
+  <circle class="dot" cx="120" cy="60"  r="2"/>
+  <circle class="dot" cx="260" cy="110" r="1.6" style="animation-delay:.6s"/>
+  <circle class="dot" cx="980" cy="50"  r="2"   style="animation-delay:1.2s"/>
+  <circle class="dot" cx="1080" cy="130" r="1.6" style="animation-delay:.3s"/>
+  <circle class="dot" cx="760" cy="40"  r="1.4" style="animation-delay:1.8s"/>
+  <circle class="dot" cx="420" cy="45"  r="1.4" style="animation-delay:2.2s"/>
+
+  <!-- back wave -->
+  <path fill="url(#wave1)" d="M0 230 Q300 190 600 225 T1200 215 V300 H0 Z">
+    <animate attributeName="d" dur="8s" repeatCount="indefinite"
+      values="M0 230 Q300 190 600 225 T1200 215 V300 H0 Z;
+              M0 220 Q300 250 600 215 T1200 230 V300 H0 Z;
+              M0 230 Q300 190 600 225 T1200 215 V300 H0 Z"/>
+  </path>
+  <!-- front wave (blends into GitHub dark background) -->
+  <path fill="#0d1117" d="M0 262 Q300 240 600 260 T1200 255 V300 H0 Z">
+    <animate attributeName="d" dur="10s" repeatCount="indefinite"
+      values="M0 262 Q300 240 600 260 T1200 255 V300 H0 Z;
+              M0 255 Q300 275 600 252 T1200 265 V300 H0 Z;
+              M0 262 Q300 240 600 260 T1200 255 V300 H0 Z"/>
+  </path>
+
+  <text class="title" x="600" y="135" text-anchor="middle">BARATH RAJ S P</text>
+  <rect x="420" y="160" width="360" height="2" fill="url(#line)">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite"/>
+  </rect>
+  <text class="sub" x="600" y="200" text-anchor="middle">CSE STUDENT  •  SOFTWARE DEVELOPER  •  AI ENTHUSIAST</text>
+</svg>
