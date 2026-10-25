@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 230" width="1200" height="230">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#38bdf8"/>
+    </marker>
+    <style>
+      .box   { fill: #161b22; stroke: #30363d; stroke-width: 2; }
+      .num   { font: 700 14px 'Segoe UI', 'Inter', Arial, sans-serif; fill: #38bdf8; letter-spacing: 2px; }
+      .label { font: 600 20px 'Segoe UI', 'Inter', Arial, sans-serif; fill: #e6edf3; }
+      .note  { font: 400 13px 'Segoe UI', 'Inter', Arial, sans-serif; fill: #8b949e; }
+      .flow  { stroke: #38bdf8; stroke-width: 2; fill: none; stroke-dasharray: 6 6; animation: dash 1.2s linear infinite; }
+      .loop  { stroke: #1f6feb; stroke-width: 2; fill: none; stroke-dasharray: 6 6; animation: dash 1.2s linear infinite; }
+      @keyframes dash { to { stroke-dashoffset: -12; } }
+    </style>
+  </defs>
+
+  <!-- Each box glows in turn (12s cycle, 2s per step) -->
+  <g>
+    <rect class="box" x="20" y="40" width="160" height="96" rx="14">
+      <animate attributeName="stroke" values="#38bdf8;#30363d;#30363d" keyTimes="0;0.16;1" dur="12s" begin="0s" repeatCount="indefinite"/>
+    </rect>
+    <text class="num" x="100" y="72" text-anchor="middle">STEP 01</text>
+    <text class="label" x="100" y="102" text-anchor="middle">Idea</text>
+    <text class="note" x="100" y="122" text-anchor="middle">find a real problem</text>
+  </g>
+  <g>
+    <rect class="box" x="220" y="40" width="160" height="96" rx="14">
+      <animate attributeName="stroke" values="#38bdf8;#30363d;#30363d" keyTimes="0;0.16;1" dur="12s" begin="2s" repeatCount="indefinite"/>
+    </rect>
+    <text class="num" x="300" y="72" text-anchor="middle">STEP 02</text>
+    <text class="label" x="300" y="102" text-anchor="middle">Research</text>
+    <text class="note" x="300" y="122" text-anchor="middle">check what exists</text>
+  </g>
+  <g>
+    <rect class="box" x="420" y="40" width="160" height="96" rx="14">
+      <animate attributeName="stroke" values="#38bdf8;#30363d;#30363d" keyTimes="0;0.16;1" dur="12s" begin="4s" repeatCount="indefinite"/>
+    </rect>
+    <text class="num" x="500" y="72" text-anchor="middle">STEP 03</text>
+    <text class="label" x="500" y="102" text-anchor="middle">Prototype</text>
+    <text class="note" x="500" y="122" text-anchor="middle">build it fast</text>
+  </g>
+  <g>
+    <rect class="box" x="620" y="40" width="160" height="96" rx="14">
+      <animate attributeName="stroke" values="#38bdf8;#30363d;#30363d" keyTimes="0;0.16;1" dur="12s" begin="6s" repeatCount="indefinite"/>
+    </rect>
+    <text class="num" x="700" y="72" text-anchor="middle">STEP 04</text>
+    <text class="label" x="700" y="102" text-anchor="middle">Feedback</text>
+    <text class="note" x="700" y="122" text-anchor="middle">test with people</text>
+  </g>
+  <g>
+    <rect class="box" x="820" y="40" width="160" height="96" rx="14">
+      <animate attributeName="stroke" values="#38bdf8;#30363d;#30363d" keyTimes="0;0.16;1" dur="12s" begin="8s" repeatCount="indefinite"/>
+    </rect>
+    <text class="num" x="900" y="72" text-anchor="middle">STEP 05</text>
+    <text class="label" x="900" y="102" text-anchor="middle">Ship</text>
+    <text class="note" x="900" y="122" text-anchor="middle">make it live</text>
+  </g>
+  <g>
+    <rect class="box" x="1020" y="40" width="160" height="96" rx="14">
+      <animate attributeName="stroke" values="#38bdf8;#30363d;#30363d" keyTimes="0;0.16;1" dur="12s" begin="10s" repeatCount="indefinite"/>
+    </rect>
+    <text class="num" x="1100" y="72" text-anchor="middle">STEP 06</text>
+    <text class="label" x="1100" y="102" text-anchor="middle">Learn</text>
+    <text class="note" x="1100" y="122" text-anchor="middle">improve &amp; repeat</text>
+  </g>
+
+  <!-- arrows between steps -->
+  <path class="flow" d="M182 88 H216" marker-end="url(#arrow)"/>
+  <path class="flow" d="M382 88 H416" marker-end="url(#arrow)"/>
+  <path class="flow" d="M582 88 H616" marker-end="url(#arrow)"/>
+  <path class="flow" d="M782 88 H816" marker-end="url(#arrow)"/>
+  <path class="flow" d="M982 88 H1016" marker-end="url(#arrow)"/>
+
+  <!-- loop back from Learn to Idea -->
+  <path class="loop" d="M1100 138 V185 H100 V142" marker-end="url(#arrow)"/>
+  <text class="note" x="600" y="210" text-anchor="middle">🔁  every project makes the next one better</text>
+</svg>
